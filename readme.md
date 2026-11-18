@@ -55,47 +55,74 @@ backend-tutorial/
 6. Protected User Profile Route
 7. MongoDB Database Integration
 
-## Project Structure
 
-backend-tutorial/
-- backend/
-  - src/
-    - config/
-    - controllers/
-    - middleware/
-    - models/
-    - routes/
-    - app.js
-    - index.js
-- package.json
-- package-lock.json
-- .gitignore
-- .env.example
 
-## Installation and Setup
+## Setup and Execution
 
-### 1. Clone the repository
+### Prerequisites
+Make sure the following are installed:
+- Node.js
+- npm
+- MongoDB Atlas account
+- Postman (for API testing)
+
+### 1. Clone the Repository
+
+```bash
 git clone YOUR_GITHUB_REPOSITORY_URL
+```
 
-### 2. Open the project folder
+### 2. Navigate to the Project Folder
+
+```bash
 cd backend-tutorial
+```
 
-### 3. Install dependencies
+### 3. Install Dependencies
+
+```bash
 npm install
+```
 
-### 4. Configure environment variables
+### 4. Configure Environment Variables
 
-Create a `.env` file in the root folder using `.env.example` as a guide.
+Create a `.env` file in the root directory.
 
-Add your own MongoDB connection string, port and JWT secret.
+Add the following variables:
 
-### 5. Start the server
+```env
+MONGO_URI=your_mongodb_connection_string
+PORT=4000
+JWT_SECRET=your_secret_key
+```
+
+### 5. Run the Backend Server
 
 For development:
+
+```bash
 npm run dev
+```
 
 For normal execution:
+
+```bash
 npm start
+```
+
+### 6. Verify the Server
+
+Open your browser and visit:
+
+```text
+http://localhost:4000
+```
+
+You should see:
+
+```text
+Backend server is running!
+```
 
 ## API Endpoints
 
@@ -103,10 +130,18 @@ npm start
 |---|---|---|
 | POST | /api/users/register | Register a new user |
 | POST | /api/users/login | Login user |
-| GET | /api/users/profile | Get protected user profile |
+| GET | /api/users/profile | Fetch protected user profile |
 
-## Testing
-APIs were tested using Postman.
+## API Testing
+
+The APIs were tested using Postman.
+
+- Registration: POST request
+- Login: POST request
+- Profile: GET request with Bearer Token authentication
+
+
+
 
 ## Security
 - Passwords are hashed using bcrypt.
