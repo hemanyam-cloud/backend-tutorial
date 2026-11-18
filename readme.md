@@ -14,6 +14,37 @@ It provides user registration, login and authentication functionality.
 - bcrypt
 - JSON Web Token (JWT)
 - Postman
+- ## Project Structure
+
+```text
+backend-tutorial/
+│
+├── backend/
+│   └── src/
+│       ├── config/
+│       │   └── db.js
+│       │
+│       ├── controllers/
+│       │   └── userController.js
+│       │
+│       ├── middleware/
+│       │   └── authMiddleware.js
+│       │
+│       ├── models/
+│       │   └── User.js
+│       │
+│       ├── routes/
+│       │   └── userRoutes.js
+│       │
+│       ├── app.js
+│       └── index.js
+│
+├── .env.example
+├── .gitignore
+├── package.json
+├── package-lock.json
+└── README.md
+```
 
 ## Features
 1. User Registration
